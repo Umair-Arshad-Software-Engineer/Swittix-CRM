@@ -1,0 +1,31 @@
+const { SyncModel } = require('./base');
+
+module.exports = new SyncModel({
+  table: 'students',
+  columns: {
+    full_name: 'str',
+    father_name: 'str',
+    phone: 'str',
+    email: 'str',
+    city: 'str',
+    date_of_birth: 'short',
+    passport_no: 'str',
+    education_level: 'str',
+    english_test: 'str',
+    english_score: 'str',
+    english_test_date: 'short',
+    destination_country: 'str',
+    intended_course: 'str',
+    preferred_university: 'str',
+    intake: 'str',
+    budget: 'str',
+    lead_source: 'str',
+    status: 'str',
+    follow_up_date: 'short',
+    notes: 'text',
+    created_at: 'short',
+    updated_at: 'short',
+  },
+  fks: { counsellor_id: 'users', created_by: 'users' },
+  natural: [],
+});
